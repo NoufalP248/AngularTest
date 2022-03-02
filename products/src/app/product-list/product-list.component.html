@@ -1,0 +1,19 @@
+<h2>Product Details:</h2>    
+<table class="table">  
+    <thead>  
+        <tr><th>Id</th><th>Name</th><th>Action</th></tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let prod of products, index as i">  
+            <td>  
+                <a routerLink="/product-list/{{prod.name}}/{{prod.name}}/{{prod.name}}"> {{prod.name}}</a>  
+            </td>  
+            <td>  
+                <a routerLink="/product-list/{{prod.price}}/{{prod.price}}/{{prod.price}}"> {{prod.price}} </a>  
+            </td>  
+            <td>   
+                <a (click)=productDetails(prod)> View |</a>  
+            </td>  
+        </tr>  
+    </tbody>     
+</table> 
